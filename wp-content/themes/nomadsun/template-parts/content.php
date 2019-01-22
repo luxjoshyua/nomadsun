@@ -10,50 +10,53 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				nomadsun_posted_on();
-				nomadsun_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
+    
+  <!-- hero needs a background image on it -->
+  <section class="hero min-vh-100 cover bg-center flex items-center justify-center" style="<?php if( get_field('hero_image') ): ?>
+      background-image: url(<?php the_field('hero_image'); ?>); 
+    <?php endif; ?>">
+
+  <div class="hero-content white tc">
+
+    <!-- our location title -->
+    <h1 class="hero-heading b mt0 mb3 ttu">
+      <?php the_title(); ?>
+    </h1>
+
+    <!-- our subheading -->
+    <?php if( get_field('subhead') ): ?>
+      <p class="hero-subhead mb6 mt0 white ttu"><?php the_field('subhead'); ?></p>
+    <?php endif; ?>
+
+
+    <!-- our formatted date -->
+    <?php if( get_field('date') ): ?>
+      <p class="f6 date ma0 white ttu tracked">
+        <?php
+        // here we convert our date into a format that php can
+        // work with, and then we format it to be nice + readable
+        echo date("F Y", strtotime(get_field('date')));
+        ?>
+      </p>
+    <?php endif; ?>
+
+
+  </div>
+</section>
+
+
+	<header class="entry-header">
+		
 	</header><!-- .entry-header -->
 
-	<?php nomadsun_post_thumbnail(); ?>
-
 	<div class="entry-content">
-		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'nomadsun' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
-
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'nomadsun' ),
-			'after'  => '</div>',
-		) );
-		?>
+		
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php nomadsun_entry_footer(); ?>
+    <?php 
+    // nomadsun_entry_footer(); 
+    ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
