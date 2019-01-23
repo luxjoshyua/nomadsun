@@ -2,7 +2,7 @@ body {
   /* fall-back font will be Georgia, then Times New Roman */
   font-family: 'Cardo', georgia, serif; 
   font-size: 18px;
-  line-height: 1.3; 
+  line-height: 1.5; 
   -webkit-font-smoothing: antialiased; 
 }
 
@@ -10,7 +10,7 @@ body {
   font-family: 'Cardo', georgia, serif; 
 }
 
-.archivo {
+.archivo, .text-block h3 {
   font-family: 'Archivo Black', sans-serif;
 }
 
@@ -28,4 +28,13 @@ body {
 
 .hero-content {
   max-width: 750px;
+}
+
+.text-block h3 {
+  font-size: 20px; 
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  /* same letter-spacing as used in the hero heading */
+  letter-spacing: 0.05em; 
 }

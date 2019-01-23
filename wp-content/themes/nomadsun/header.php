@@ -21,6 +21,8 @@ error_reporting(E_ALL);
 
   <!-- useful error log code, put in terminal: tail -F /Applications/MAMP/logs/php_error.log -->
 
+  <!-- DRY = don't repeat yourself (in code) -->
+
   
   
   <!-- fonts -->
