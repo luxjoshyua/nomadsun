@@ -31,7 +31,10 @@ get_header();
 
 			/* Start the Loop */
 			while ( have_posts() ) :
-				the_post();
+        the_post();
+        
+        // here we include our component file
+        get_template_part( 'template-parts/content-hero' );
 
 				/*
 				 * Include the Post-Type-specific template for the content.

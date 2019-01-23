@@ -9,6 +9,8 @@
  * @package nomadsun
  */
 
+error_reporting(E_ALL);
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -16,10 +18,18 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
+
+  <!-- useful error log code, put in terminal: tail -F /Applications/MAMP/logs/php_error.log -->
+
   
+  
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Cardo:400,400i|Tenor+Sans" rel="stylesheet">
+
   <!-- tachyons -->
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
 
+  
 	<?php wp_head(); ?>
 </head>
 
@@ -35,7 +45,7 @@
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
-			else :
+          else :
 				?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php

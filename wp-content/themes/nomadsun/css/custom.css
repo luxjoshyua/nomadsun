@@ -1,3 +1,31 @@
+body {
+  /* fall-back font will be Georgia, then Times New Roman */
+  font-family: 'Cardo', georgia, serif; 
+  font-size: 18px;
+  line-height: 1.3; 
+  -webkit-font-smoothing: antialiased; 
+}
+
+.cardo {
+  font-family: 'Cardo', georgia, serif; 
+}
+
+.archivo {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.tenor {
+  font-family: 'Tenor Sans', sans-serif;
+}
+
 .hero-heading, .hero-subhead {
   font-size: 64px; 
+}
+
+.hero-heading {
+  letter-spacing: 0.05em; 
+}
+
+.hero-content {
+  max-width: 750px;
 }
