@@ -1,3 +1,16 @@
+
+ <!-- link to the individual post -->
+  <!-- using the permalink() gives us a link to the post -->
+
+
+<!-- <h1>
+  <a href="<?php the_permalink(); ?>">
+    Check out <?php the_title(); ?>!
+  </a>
+</h1> -->
+
+
+
 <!-- hero needs a background image on it -->
 <section class="hero min-vh-100 cover bg-center flex items-center justify-center" style="<?php if( get_field('hero_image') ): ?>
       background-image: url(<?php the_field('hero_image'); ?>); 

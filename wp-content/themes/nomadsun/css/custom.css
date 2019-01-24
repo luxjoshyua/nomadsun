@@ -38,3 +38,13 @@ body {
   /* same letter-spacing as used in the hero heading */
   letter-spacing: 0.05em; 
 }
+
+
+.line {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  height: 1px; 
+  width: 40px; 
+  background-color: #1c1c1c; 
+}

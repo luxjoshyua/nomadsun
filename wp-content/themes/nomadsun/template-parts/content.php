@@ -11,7 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    
 	<header class="entry-header">
 		
 	</header><!-- .entry-header -->
@@ -23,39 +22,48 @@
       if( get_row_layout() == 'header' ): ?>
 
         <!-- here we have our header -->
-        <div class="flex">
+        <!-- we make the header have flexbox on large screens -->
+        <div class="flex-l">
 
           <!-- our header background image -->
-          <div class="w-60 min-vh-100 cover bg-center" style="<?php if( get_field('hero_image') ): ?>
+          <div class="w-100 w-60-l vh-50 vh-100-l cover bg-center" style="<?php if( get_field('hero_image') ): ?>
           background-image: url(<?php the_field('hero_image'); ?>); <?php endif; ?>"></div>
 
           <!-- our header content -->
-          <!-- w-40 because we use w-60 above -->
+          
+          <!-- we make our header background have 100% width,
+                and then 60% width on large screens, as well as 50vh and 100vh
+                height on small and large screens  -->
 
-          <div class="w-40 flex items-center justify-center ph4">
-              <!-- flex-box will center this one child element as it works from parent to child -->
-              <!-- if it has heaps of elements, flex-box will try to arrange as a grid -->
+          <div class="w-100 w-40-l flex items-center justify-center ph3 ph4-l relative">
+            <!-- flex-box will center this one child element as it works from parent to child -->
+            <!-- if it has heaps of elements, flex-box will try to arrange as a grid -->
             <div class="tc">
-              <p class="f6 archivo mt0 mb5 ttu tracked">   
+              <!-- is being absolutely positioned on larger screens, so don't need the margin-bottom -->
+              <!-- here we use absolute position for larger screens to put the date in the top center -->
+              <p class="f6 archivo mt0 mb5 mb0-l ttu tracked absolute-l top-0-l left-0-l w-100-l pt4">   
                 <?php echo date("F Y", strtotime(get_field('date')));?>
+                <!-- line -->
+                <span class="line mt4"></span>
               </p>
-              <h1 class="f1 archivo mt0 mb3 ttu">
+
+              <h1 class="f2 f1-l archivo mt0 mb4 ttu lh-title">
                 <!-- standard wordpress data -->
+                <!-- we change the typescale for larger screens and squish the line height a bit because of the bigger font-size -->
                 <?php the_title(); ?>
               </h1>
-              <p class="f1 tenor mt0 mb4 ttu">
+
+              <p class="f2 f1-l tenor mt0 mb4 mb5-l ttu lh-title">
                 <?php the_field('subhead'); ?>
               </p>
               <!-- sets a max-width and rem -->
-              <p class="f4 cardo i measure">
+              <p class="f4 cardo i measure center mv0">
                 <!-- specific to this component -->
                 <?php the_sub_field('header_intro'); ?>
               </p>
 
             </div>
-    
           </div>
-
         </div>
 
       <!-- if it’s a text component, show us the data -->
