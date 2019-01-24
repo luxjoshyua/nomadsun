@@ -26,8 +26,7 @@
         <div class="flex-l">
 
           <!-- our header background image -->
-          <div class="w-100 w-60-l vh-50 vh-100-l cover bg-center" style="<?php if( get_field('hero_image') ): ?>
-          background-image: url(<?php the_field('hero_image'); ?>); <?php endif; ?>"></div>
+          <div class="w-100 w-60-l vh-50 vh-100-l cover bg-center" style="<?php nice_background('hero_image');?>"></div>
 
           <!-- our header content -->
           
@@ -42,7 +41,7 @@
               <!-- is being absolutely positioned on larger screens, so don't need the margin-bottom -->
               <!-- here we use absolute position for larger screens to put the date in the top center -->
               <p class="f6 archivo mt0 mb5 mb0-l ttu tracked absolute-l top-0-l left-0-l w-100-l pt4">   
-                <?php echo date("F Y", strtotime(get_field('date')));?>
+                <?php nice_date(get_field('date')); ?>
                 <!-- line -->
                 <span class="line mt4"></span>
               </p>

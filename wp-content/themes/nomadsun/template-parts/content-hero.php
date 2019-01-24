@@ -12,9 +12,8 @@
 
 
 <!-- hero needs a background image on it -->
-<section class="hero min-vh-100 cover bg-center flex items-center justify-center" style="<?php if( get_field('hero_image') ): ?>
-      background-image: url(<?php the_field('hero_image'); ?>); 
-    <?php endif; ?>">
+<section class="hero min-vh-100 cover bg-center flex items-center justify-center" 
+      style="<?php nice_background('hero_image');?>">
 
   <div class="hero-content white tc">
 
@@ -35,7 +34,8 @@
         <?php
         // here we convert our date into a format that php can
         // work with, and then we format it to be nice + readable
-        echo date("F Y", strtotime(get_field('date')));
+        // echo date("F Y", strtotime(get_field('date')));
+        nice_date(get_field('date')); 
         ?>
       </p>
     <?php endif; ?>
