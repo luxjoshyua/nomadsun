@@ -10,16 +10,32 @@ body {
   font-family: 'Cardo', georgia, serif; 
 }
 
-.archivo, .text-block h3 {
+.archivo, 
+.text-block h3,
+.text-block blockquote h4 {
   font-family: 'Archivo Black', sans-serif;
+  font-weight: normal; 
 }
 
-.tenor {
+.text-block blockquote h4 {
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+  font-size: 14px; 
+  margin: 0; 
+}
+
+.archivo-regular {
+  font-family: 'Archivo', sans-serif; 
+}
+
+.tenor,
+.text-block blockquote p {
   font-family: 'Tenor Sans', sans-serif;
 }
 
-.hero-heading, .hero-subhead {
-  font-size: 64px; 
+.text-block blockquote p {
+  font-size: 36px; 
+  line-height: 1.33;
 }
 
 .hero-heading {
@@ -39,7 +55,6 @@ body {
   letter-spacing: 0.05em; 
 }
 
-
 .line {
   display: block;
   margin-left: auto;
@@ -48,3 +63,64 @@ body {
   width: 40px; 
   background-color: #1c1c1c; 
 }
+
+/* here we overwrite the inline size styles on our image
+  so that it scales nicely with the page */
+.gallery-image img {
+  /* flexes automatically to the page size */
+  width: auto !important;
+  height: auto !important; 
+  /* images by default are inline-block */
+  display: block; 
+}
+
+.caption {
+  max-width: 870px; 
+}
+
+.container {
+  max-width: 1300px;
+}
+
+.explore-title {
+  margin-bottom: 48px; 
+  max-width: 320px; 
+}
+
+.description {
+  max-width: 860px; 
+}
+
+.footer-content {
+  background-color: #1c1c1c; 
+}
+
+.link:focus {
+  outline: none; 
+}
+
+.gallery,
+.gallery-image:last-of-type {
+  margin-bottom: 0; 
+}
+
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  margin-top: 0;
+  margin-bottom: 48px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -12,21 +12,22 @@
 
 
 <!-- hero needs a background image on it -->
-<section class="hero min-vh-100 cover bg-center flex items-center justify-center" 
-      style="<?php nice_background('hero_image');?>">
+<a class="db link hero min-vh-100 cover bg-center flex items-center justify-center" 
+      style="<?php nice_background('hero_image');?>" href="<?php the_permalink(); ?>">
 
-  <div class="hero-content white tc">
+  <div class="hero-content white tc ph3 ph4-l">
 
     <!-- our location title -->
-    <h1 class="hero-heading archivo b mt0 mb3 ttu">
+    <h1 class="hero-heading f2 f1-l archivo b mt0 mb3 ttu lh-title">
       <?php the_title(); ?>
     </h1>
 
     <!-- our subheading -->
     <?php if( get_field('subhead') ): ?>
-      <p class="hero-subhead tenor mb6 mt0 white ttu"><?php the_field('subhead'); ?></p>
+      <p class="hero-subhead f2 f1-l tenor mb5 mb6-l mt0 white ttu lh-title">
+        <?php the_field('subhead'); ?>
+      </p>
     <?php endif; ?>
-
 
     <!-- our formatted date -->
     <?php if( get_field('date') ): ?>
@@ -40,6 +41,5 @@
       </p>
     <?php endif; ?>
 
-
   </div>
-</section>
+</a>
