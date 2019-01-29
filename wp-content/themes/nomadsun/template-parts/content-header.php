@@ -3,7 +3,7 @@
   <div class="flex-l">
 
       <!-- our header background image -->
-      <div class="w-100 w-60-l vh-50 vh-100-l cover bg-center" style="<?php nice_background('hero_image');?>"></div>
+      <div class="w-100 w-60-l vh-50 vh-100-l cover bg-center bg-red" style="<?php nice_background('hero_image');?>"></div>
 
       <!-- our header content -->
       
