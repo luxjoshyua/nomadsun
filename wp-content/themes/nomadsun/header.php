@@ -23,15 +23,12 @@ error_reporting(E_ALL);
 
   <!-- DRY = don't repeat yourself (in code) -->
 
-  
-  
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Cardo:400,400i|Tenor+Sans|Archivo" rel="stylesheet">
 
   <!-- tachyons -->
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
 
-  
 	<?php wp_head(); ?>
 </head>
 

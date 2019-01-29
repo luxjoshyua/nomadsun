@@ -13,10 +13,10 @@
       <div class="gallery-image ph3 mb4 <?php the_field('image_width', $image['id']); ?>">
 
         <!-- here we get each image by its ID -->
-        <?php echo wp_get_attachment_image($image[id], 'full'); ?>  
-
+        <?php echo wp_get_attachment_image($image['id'], 'full'); ?>  
+          <!-- <?php echo $image[id] ?> -->
         <!-- here we assign our caption to a variable called $caption -->
-        <?php $caption = wp_get_attachment_caption($image[id]); ?>
+        <?php $caption = wp_get_attachment_caption($image['id']); ?>
 
         <!-- if the caption is not empty, we render it onto the page -->
         <!-- we say it's not empty by using the ! -->
