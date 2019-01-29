@@ -51,13 +51,13 @@ error_reporting(E_ALL);
 
           <div class="flex items-center justify-end w4">
             <a href="https://facebook.com/nomadsun" class="db mh2 link">
-              <img src="<?php bloginfo('template_directory')?>/images/facebook.svg" class="db">
+              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/facebook.svg" class="db">  
             </a>
             <a  href="https://twitter.com/nomadsun" class="db mh2 link">
-              <img src="<?php bloginfo('template_directory');?>/images/twitter.svg" class="db">
+              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/twitter.svg" class="db">  
             </a>
             <a href="https://instagram.com/nomadsun" class="db mh2 link">
-              <img src="<?php bloginfo('template_directory');?>/images/insta.svg" class="db">
+              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/insta.svg" class="db">  
             </a>
           </div>
         </nav><!-- #site-navigation -->
