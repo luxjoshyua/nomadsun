@@ -20,16 +20,20 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'nomadsun');
+// define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'nomadsun');
+define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'nomadsun-lux');
 
 /** MySQL database username */
-define('DB_USER', getenv('MYSQL_USER') ?: 'root');
+// define('DB_USER', getenv('MYSQL_USER') ?: 'root');
+define('DB_USER', getenv('MYSQL_USER') ?: 'nomadsun-lux');
 
 /** MySQL database password */
-define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?: 'root');
+// define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?:  'root');
+define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?:  'Xt0fCcQbr3uBbGCYWUWJCrQZ');
 
 /** MySQL hostname */
-define('DB_HOST', getenv('MYSQL_HOST') ?:  'localhost');
+// define('DB_HOST', getenv('MYSQL_HOST') ?: 'localhost');
+define('DB_HOST', getenv('MYSQL_HOST') ?: 'nomadsun-lux.mysql.eu2.frbit.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -53,6 +57,7 @@ define('SECURE_AUTH_KEY',  getenv('SECURE_AUTH_KEY') ?: '=l`Zl KYD7cB21Gv,ilhC|;
 define('LOGGED_IN_KEY', getenv('LOGGED_IN_KEY') ?: '#,t1{gi~p2y~bkoad}f13VjO27Tgp-ZjA?B6)x/w>,vnXvQU#XVqyh1B>l`^lVk~');
 
 define('NONCE_KEY',  getenv('NONCE_KEY') ?:  '04BB#eI8aMHSNIh/Q(/v5b!~6sjN&3jydfw xe7t]n j[JrWohjZ1[]tWk!Rh@^Y');
+
 
 define('AUTH_SALT', getenv('AUTH_SALT') ?:  'uzW DQ> L).HN`Ik|f,[^4jmscR~UG1[vhlO*30 |hD?`DL4S3=f|F^T:&6<Sk~A');
 

@@ -19,7 +19,7 @@
             <div class="tenor f3 f2-l measure-narrow tc center white">
               If you want to say hey or follow me along my adventures I'm on <a href="https://facebook.com/nomadsun" class="archivo link white">Facebook</a>, 
               <a href="https://twitter.com/nomadsun" class="archivo link white">Twitter</a>, 
-              <a href="https://instagram.com/nomadsun" class="archivo link white">Instagram</a>. 👋
+              <a href="https://instagram.com/nomadsun" class="archivo link white">Instagram</a>. :waveing hand:
             </div>
           </div>
 
