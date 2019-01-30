@@ -46,7 +46,7 @@ error_reporting(E_ALL);
           </a>
 
           <a href="<?php echo get_site_url(); ?>">
-            <img src="<?php bloginfo('template_directory'); ?>/images/sun-logo.svg" class="db">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/sun-logo.svg" class="db">  
           </a>
 
           <div class="flex items-center justify-end w4">

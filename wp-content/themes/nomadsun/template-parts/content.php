@@ -16,16 +16,16 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-    <!-- if we have some flexible content, let’s loop through it -->
+    <!-- if we have some flexible content lets loop through it -->
       <?php if( have_rows('content') ): while ( have_rows('content') ) : the_row();
       
-      // if it’s a header, go through the data
+      // if its a header go through the data
       if( get_row_layout() == 'header' ): ?>
 
       <!-- here we separate our header into its own component file -->
       <?php get_template_part( 'template-parts/content-header' ); ?>
 
-      <!-- if it’s a text component, show us the data -->
+      <!-- if its a text component show us the data -->
       <?php elseif( get_row_layout() == 'text_block' ): ?>
 
       <!-- here we separate our text into its own component file -->
@@ -42,7 +42,6 @@
 
   </div><!-- .entry-content -->
 
-  
 	<footer class="entry-footer">
 
     <!-- here we have our social link component -->
@@ -50,8 +49,6 @@
 
     <!-- here we include our explore component -->
     <?php get_template_part( 'template-parts/content-explore' ); ?>
-
-    
 
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

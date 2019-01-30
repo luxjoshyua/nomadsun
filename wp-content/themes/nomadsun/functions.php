@@ -160,11 +160,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
 function shout_name($name) {
   echo strtoupper($name);
 }
-
 
 // write a function that formats our date in a nice way
 function nice_date($date) {
@@ -181,3 +179,10 @@ function nice_background($image_field) {
   // 
   echo "background-image: url(" . get_field($image_field) . ");";
 }
+
+function newborn_enqueue_comments_reply() {
+  if( get_option( 'thread_comments' ) ) {
+  wp_enqueue_script( 'comment-reply' );
+  }
+  }
+  add_action( 'comment_form_before', 'newborn_enqueue_comments_reply' );

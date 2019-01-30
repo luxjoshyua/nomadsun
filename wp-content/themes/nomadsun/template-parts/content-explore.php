@@ -26,7 +26,7 @@
       <div class="aspect-ratio aspect-ratio--1x1">
         <!-- our inner element takes up the full width and height -->
         <div class="aspect-ratio--object bg-center cover flex items-center justify-center ph3" style="<?php nice_background('hero_image'); ?>">
-          <!-- code as we’re used to already! -->
+          <!-- code as we are used to already! -->
           <p class="archivo white mv0 ttu tracked f5 f4-l tc lh-title">
             <?php the_title(); ?>
           </p>
