@@ -21,19 +21,33 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 // define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'nomadsun');
-define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'nomadsun-lux');
+// define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'nomadsun-lux');
 
 /** MySQL database username */
 // define('DB_USER', getenv('MYSQL_USER') ?: 'root');
-define('DB_USER', getenv('MYSQL_USER') ?: 'nomadsun-lux');
+// define('DB_USER', getenv('MYSQL_USER') ?: 'nomadsun-lux');
+
+$local = False;
+if ($local == True) {
+  define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'nomadsun');
+  define('DB_USER', getenv('MYSQL_USER') ?: 'root');
+  define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?:  'root');
+  define('DB_HOST', getenv('MYSQL_HOST') ?: 'localhost');
+
+} else {
+  define('DB_NAME', getenv('MYSQL_DATABASE') ?: 'nomadsun-lux');
+  define('DB_USER', getenv('MYSQL_USER') ?: 'nomadsun-lux');
+  define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?:  'Xt0fCcQbr3uBbGCYWUWJCrQZ');
+  define('DB_HOST', getenv('MYSQL_HOST') ?: 'nomadsun-lux.mysql.eu2.frbit.com');
+}; 
 
 /** MySQL database password */
 // define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?:  'root');
-define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?:  'Xt0fCcQbr3uBbGCYWUWJCrQZ');
+// define('DB_PASSWORD', getenv('MYSQL_PASSWORD') ?:  'Xt0fCcQbr3uBbGCYWUWJCrQZ');
 
 /** MySQL hostname */
 // define('DB_HOST', getenv('MYSQL_HOST') ?: 'localhost');
-define('DB_HOST', getenv('MYSQL_HOST') ?: 'nomadsun-lux.mysql.eu2.frbit.com');
+// define('DB_HOST', getenv('MYSQL_HOST') ?: 'nomadsun-lux.mysql.eu2.frbit.com');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
